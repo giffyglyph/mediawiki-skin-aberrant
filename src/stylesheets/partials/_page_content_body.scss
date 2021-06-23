@@ -1,0 +1,186 @@
+// Styles for the content body.
+
+#mw-content-container .content-body {
+	margin-top: 1rem;
+	flex-grow: 1;
+
+	> :last-child,
+	> :last-child > :last-child {
+		margin-bottom: 0;
+	}
+
+	h2,
+	h3,
+	h4,
+	h5 {
+		font-family: $page-content-heading-font;
+		margin: 2rem 0 1rem;
+		display: flex;
+		align-items: flex-end;
+
+		.mw-headline {
+			display: flex;
+
+			.icon {
+				background: #f5f5f5;
+				color: $theme-primary;
+				display: inline-flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 0.6em;
+				border-radius: 100%;
+				padding: 0 1em;
+				margin-right: 0.5em;
+			}
+
+			.level {
+				background: $theme-primary;
+		    color: white;
+		    border-radius: 100%;
+		    width: 1.714em;
+		    text-align: center;
+		    margin-right: 0.5em;
+		    font-size: 0.7em;
+		    line-height: 1.714;
+			}
+
+			.option::before {
+				content: '';
+				box-sizing: border-box;
+				height: 1em;
+				width: 1em;
+				display: inline-block;
+				margin-left: 0.25em;
+				margin-right: 0.5em;
+				border: 2px solid $theme-primary;
+				transform: rotate(45deg);
+				border-radius: 0.15em;
+				margin-bottom: -0.15em;
+			}
+		}
+
+		.mw-editsection {
+			letter-spacing: 0;
+			margin: 0;
+			font-size: 0.5em;
+			margin-left: 0.75em;
+			line-height: 1.7;
+
+			a {
+				text-transform: lowercase;
+				line-height: inherit;
+			}
+		}
+	}
+
+	ul,
+	ol {
+		margin-bottom: 1rem;
+
+		ul,
+		ol {
+			margin-bottom: 0;
+		}
+	}
+
+	h2 {
+		font-size: $page-content-font-size-h2;
+		padding: 2rem 3rem 0;
+		border-top: 1px dotted $page-content-border-color-h2;
+		margin: 2rem -3rem 1rem;
+
+		.mw-headline {
+			color: $page-content-color-h2;
+		}
+	}
+
+	h3 {
+		font-size: $page-content-font-size-h3;
+		border-bottom: 1px dotted $page-content-border-color-h3;
+		padding-bottom: 0.5rem;
+		margin-bottom: 0.5rem;
+
+		.mw-headline {
+			color: $page-content-color-h3;
+		}
+	}
+
+	h4 {
+		font-size: $page-content-font-size-h4;
+
+		.mw-headline {
+			color: $page-content-color-h4;
+		}
+	}
+
+	h5 {
+		font-size: $page-content-font-size-h5;
+
+		.mw-headline {
+			color: $page-content-color-h5;
+		}
+	}
+
+	h6 {
+		font-size: $page-content-font-size-h6;
+
+		.mw-headline {
+			color: $page-content-color-h6;
+		}
+	}
+
+	pre {
+		background: $page-content-well-bg;
+		padding: 0.5rem 1rem;
+	}
+
+	.mw-parser-output > :last-child {
+		margin-bottom: 0;
+	}
+}
+
+#mw-content-container .content-body #toc {
+	background: $page-content-well-bg;
+	padding: 1rem 2rem 1rem 1rem;
+	display: inline-block;
+	clear: both;
+	min-width: 25%;
+
+	.toctext span {
+		display: none;
+	}
+
+	.toctitle {
+		display: flex;
+		align-items: flex-end;
+		font-size: 1rem;
+
+		h2 {
+			background: none;
+			color: black;
+			padding: 0;
+			margin: 0;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-size: inherit;
+			font-family: inherit;
+			border: none;
+		}
+
+		.toctogglespan {
+			font-size: 0.75em;
+			margin-left: 0.5em;
+			font-family: inherit;
+
+			.toctogglelabel {
+				margin: 0;
+			}
+		}
+	}
+
+	> ul {
+		margin-top: 1rem;
+		margin-bottom: 0;
+		padding-left: 1.6em;
+	}
+}

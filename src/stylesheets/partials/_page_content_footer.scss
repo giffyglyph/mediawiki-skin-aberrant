@@ -1,0 +1,34 @@
+// Styles for the content footer.
+
+#mw-content-container .content-footer {
+	margin-top: 2rem;
+	border-top: 1px dotted $page-content-border-color-footer;
+	padding-top: 2rem;
+	font-size: smaller;
+	margin-left: -3rem;
+	margin-right: -3rem;
+	padding-left: 3rem;
+	padding-right: 3rem;
+
+	#footer-bottom {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.visualClear {
+		display: none;
+	}
+
+	#lastmod {
+		margin-bottom: 1em;
+		color: rgba($page-content-color, 0.5);
+		font-style: italic;
+	}
+}

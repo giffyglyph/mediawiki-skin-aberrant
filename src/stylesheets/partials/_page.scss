@@ -1,0 +1,11 @@
+// Styles for the main page wrapper.
+
+#mw-wrapper {
+	display: grid;
+	grid-template-columns: 1fr $page-content-width 1fr;
+	grid-template-rows: auto 1fr;
+	grid-template-areas:
+		"header header header"
+		"navigation content actions";
+	flex-grow: 1;
+}

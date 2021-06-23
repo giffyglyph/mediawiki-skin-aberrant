@@ -1,0 +1,39 @@
+{
+	"name": "Aberrant",
+	"version": "1.0.1",
+	"author": "Giffyglyph",
+	"url": "https://www.mediawiki.org/wiki/Skin:Aberrant",
+	"descriptionmsg": "aberrant-desc",
+	"namemsg": "skinname-aberrant",
+	"license-name": "GPL-2.0-or-later",
+	"type": "skin",
+	"requires": {
+		"MediaWiki": ">= 1.34.0"
+	},
+	"ValidSkinNames": {
+		"aberrant": "Aberrant"
+	},
+	"MessagesDirs": {
+		"Aberrant": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"skins.aberrant": {
+			"targets": [ "desktop", "mobile" ],
+			"styles": {
+				"resources/css/aberrant.css": {
+					"media": "screen"
+				}
+			}
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteSkinPath": "Aberrant"
+	},
+	"AutoloadClasses": {
+		"SkinAberrant": "includes/SkinAberrant.php",
+		"AberrantTemplate": "includes/AberrantTemplate.php"
+	}
+}

@@ -1,0 +1,10 @@
+// Basic html elements.
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	display: flex;
+	background: rgba(50,55,62,0.1) !important;
+	background-image: linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent) !important;
+	background-size: 1rem 1rem !important;
+}

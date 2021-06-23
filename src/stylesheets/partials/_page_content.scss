@@ -1,0 +1,30 @@
+// Styles for page content.
+
+#mw-content-container {
+	grid-area: content;
+	padding: 2rem 3rem;
+	background: white;
+	display: flex;
+
+	#mw-content {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+
+		.content-body {
+
+			a.new {
+				color: #d00000;
+			}
+
+			.printfooter {
+				display: none;
+			}
+		}
+	}
+}
+
+#mw-indicator-mw-helplink {
+	display: none;
+}

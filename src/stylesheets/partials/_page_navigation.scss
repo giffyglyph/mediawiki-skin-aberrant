@@ -1,0 +1,162 @@
+// Styles for the page navigation sidebar.
+
+#mw-navigation-container {
+	grid-area: navigation;
+	background: $page-navigation-bg;
+	padding: 0;
+	color: $page-navigation-color;
+	max-width: $page-navigation-width;
+	margin: 0 0 0 auto;
+	width: 100%;
+
+	#mw-navigation {
+		box-sizing: border-box;
+	}
+
+	.emptyPortlet {
+		display: none;
+	}
+
+	.mw-portlet {
+		padding: 1rem 2rem;
+
+		h3 {
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-size: 1rem;
+			opacity: 0.5;
+		}
+
+		a {
+			color: inherit;
+		}
+
+		.mw-portlet-body ul {
+			margin: 0;
+			padding-left: 1.5rem;
+			padding-left: 0;
+			margin: 0;
+			list-style: none;
+
+			li {
+
+				a {
+					display: block;
+					padding: 0.35em 2rem 0.35em 4rem;
+					margin-left: -2rem;
+					margin-right: -2rem;
+
+					&::before {
+						opacity: 0.65;
+						font-family: "Font Awesome 5 Free";
+						content: "\f111";
+						font-weight: bold;
+						margin-right: 1rem;
+						width: 1rem;
+						margin-left: -2rem;
+						display: inline-block;
+						text-align: center;
+					}
+				}
+
+				&:hover {
+
+					a {
+						background: rgba(0,0,0,0.05);
+						text-decoration: none;
+						color: $theme-primary;
+
+						&::before {
+							opacity: 1;
+						}
+					}
+				}
+			}
+
+			#n-mainpage-description a::before {
+				content: '\f015';
+			}
+
+			#n-recentchanges a::before {
+				content: '\f784';
+			}
+
+			#n-randompage a::before {
+				content: '\f074';
+			}
+
+			#n-help-mediawiki a::before {
+				content: '\f128';
+			}
+
+			#t-specialpages a::before {
+				content: '\f12a';
+			}
+
+			#feedlinks .feedlink {
+				background: none;
+
+				&::before {
+					content: '\f09e';
+				}
+			}
+		}
+	}
+
+	#p-search {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 2rem;
+
+		form {
+			width: 100%;
+
+			.input-group {
+				border-radius: 1cm;
+				overflow: hidden;
+			}
+		}
+
+		.input-group-append {
+			position: absolute;
+			right: 0;
+			z-index: 1;
+		}
+
+		.btn-search {
+			background: none;
+			color: $page-navigation-color;
+			border: none;
+		}
+
+		.btn-menu {
+			background: $page-header-bg;
+			color: white;
+			border-radius: 1cm;
+			border: 0;
+			display: none;
+			outline: none;
+			box-shadow: none;
+
+			&:hover {
+				background-color: $theme-secondary;
+			}
+		}
+
+		input {
+			padding: 0.25rem 2.5rem 0.25rem 1rem;
+			border: none;
+
+			&:focus {
+				background: darken($page-navigation-bg, 5%);
+				outline: none;
+				box-shadow: none;
+				z-index: 1;
+			}
+		}
+	}
+
+	#bd-navigation-menu {
+		display: block;
+	}
+}

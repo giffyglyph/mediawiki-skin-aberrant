@@ -1,0 +1,187 @@
+// Styles for the main edit content form.
+
+.warningbox {
+	background: $theme-secondary;
+	color: darken($theme-secondary, 30%);
+	padding: 1rem;
+	border-color: $theme-secondary;
+	border-radius: 0.25cm;
+
+	> :last-child {
+		margin-bottom: 0;
+	}
+}
+
+.previewnote {
+	background: $theme-secondary;
+	color: darken($theme-secondary, 30%);
+	padding: 1rem;
+	border-color: $theme-secondary;
+	border-radius: 0.25cm;
+
+	h2 {
+		font-size: 1.2rem !important;
+		border: 0 !important;
+		margin: 0 0 1rem !important;
+		padding: 0 !important;
+		text-transform: uppercase;
+		font-weight: bold;
+		letter-spacing: 1px;
+	}
+
+	.warningbox {
+		background: none;
+		color: inherit;
+		padding: 0;
+		border: none;
+		margin: 0;
+	}
+}
+
+#mw-content-container .content-body .mw-editform {
+	background: $page-content-form-bg;
+	padding: 2rem;
+	border-radius: 0.25cm;
+	overflow: hidden;
+
+	textarea {
+		padding: 1rem;
+		border-radius: 0.25cm;
+		border-color: white;
+		width: 100%;
+		resize: vertical;
+	}
+
+	.editOptions {
+		margin-top: 1rem;
+
+		> *:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+	}
+
+	#wpSummaryLabel {
+
+		.oo-ui-fieldLayout-header {
+			padding: 0;
+			margin-bottom: 0.5rem;
+
+			label {
+				line-height: inherit;
+				margin: 0;
+			}
+		}
+	}
+
+	#wpSummaryWidget {
+		margin-bottom: 0;
+
+		input {
+			border-radius: 1cm;
+			border-color: white;
+			padding-left: 1rem;
+			padding-right: 1rem;
+		}
+	}
+
+	#editpage-copywarn {
+		line-height: inherit;
+		font-size: smaller;
+	}
+
+	.editButtons {
+		background: darken($page-content-form-bg, 2%);
+		margin: 2rem -2rem -2rem;
+		padding: 2rem;
+		display: flex;
+		flex-direction: column;
+
+		> * {
+			margin-right: 0;
+
+			+ * {
+				margin-top: 1rem;
+			}
+		}
+
+		input {
+			width: 100%;
+			border-radius: 1cm;
+		}
+
+		.cancelLink,
+		.editHelp {
+			text-align: center;
+			display: block;
+
+			span {
+				margin: 0;
+			}
+
+			a {
+				padding: 0;
+
+				&:hover {
+					background: none;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	.limitreport {
+		display: none;
+	}
+}
+
+#wikiPreview,
+#wikiDiff {
+
+	&::after {
+		display: block;
+		content: '';
+		margin-left: -3rem;
+		margin-right: -3rem;
+		border-bottom: 1px dotted rgba(0,0,0,0.2);
+		padding-bottom: 2rem;
+		margin-bottom: 2rem;
+		width: calc(100% + 6rem);
+	}
+}
+
+@media only screen and (max-width: $page-navigation-width + $page-content-width) {
+
+	#wikiPreview,
+	#wikiDiff {
+
+		&::after {
+			margin-left: -2rem;
+			margin-right: -2rem;
+			width: calc(100% + 4rem);
+		}
+	}
+}
+
+@media only screen and (max-width: $page-content-width) {
+
+	#mw-content-container .content-body .mw-editform {
+		padding: 1rem;
+
+		.editButtons {
+			margin: 1rem -1rem -1rem;
+			padding: 1rem;
+		}
+	}
+
+	#wikiPreview,
+	#wikiDiff {
+
+		&::after {
+			margin-left: -1rem;
+			margin-right: -1rem;
+			padding-bottom: 1rem;
+			margin-bottom: 1rem;
+			width: calc(100% + 2rem);
+		}
+	}
+}

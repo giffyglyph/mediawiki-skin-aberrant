@@ -1,0 +1,41 @@
+// Fixes for the registration page.
+
+.mw-special-CreateAccount {
+
+	form > div > div:nth-child(2) {
+		margin-top: 0 !important;
+	}
+
+	.mw-ui-container #userloginForm {
+		float: none;
+		margin: 0;
+		line-height: 1.5;
+	}
+
+	.mw-createacct-benefits-container {
+		display: none;
+	}
+
+	.htmlform-tip {
+		margin-bottom: 1rem;
+		font-size: smaller;
+		opacity: 0.5;
+		margin-top: 0.5rem !important;
+	}
+
+	.mw-htmlform-field-HTMLSubmitField {
+		background: darken($page-content-form-bg, 2%);
+		margin: 2rem -2rem -2rem !important;
+		padding: 2rem;
+		width: calc(100% + 4rem);
+	}
+}
+
+@media only screen and (max-width: $page-content-width) {
+
+	.mw-special-CreateAccount .mw-htmlform-field-HTMLSubmitField {
+		margin: 1rem -1rem -1rem !important;
+		padding: 1rem;
+		width: calc(100% + 2rem);
+	}
+}

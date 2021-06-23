@@ -1,0 +1,186 @@
+// Styles for the page actions sidebar.
+
+#mw-actions-container {
+	grid-area: actions;
+	background: $page-actions-bg;
+	color: $page-actions-color;
+	max-width: $page-actions-width;
+	margin: 0 auto 0 0;
+	width: 100%;
+
+	#mw-actions {
+		padding: 2rem;
+
+		> :first-child  h3:first-of-type {
+			padding-top: 0;
+			margin-top: 0;
+		}
+	}
+}
+
+.page-actions {
+
+	.emptyPortlet {
+		display: none;
+	}
+
+	h3 {
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-size: 1em;
+		margin: 2em -2rem 1em;
+		padding: 0 2rem;
+		opacity: 0.5;
+	}
+
+	.selected a {
+		color: $theme-primary;
+
+		&::before {
+			opacity: 1;
+		}
+	}
+
+	ul {
+		padding-left: 0;
+		margin: 0;
+		list-style: none;
+
+		li {
+
+			&:hover a {
+				background: rgba(0,0,0,0.05);
+				text-decoration: none;
+				color: $theme-primary;
+
+				&::before {
+					opacity: 1;
+				}
+			}
+
+			a {
+				display: block;
+				padding: 0.35em 2rem 0.35em 4rem;
+				margin-left: -2rem;
+				margin-right: -2rem;
+				color: inherit;
+
+				&::before {
+					opacity: 0.65;
+					font-family: "Font Awesome 5 Free";
+					content: "\f111";
+					font-weight: bold;
+					margin-right: 1rem;
+					width: 1rem;
+					margin-left: -2rem;
+					display: inline-block;
+					text-align: center;
+				}
+			}
+		}
+	}
+
+	#ca-nstab-main a::before,
+	#ca-view a::before,
+	#ca-nstab-project a::before {
+		content: '\f06e';
+	}
+
+	#ca-nstab-special a::before {
+		content: '\f023';
+	}
+
+	#ca-talk a::before {
+		content: '\f075';
+	}
+
+	#ca-viewsource a::before {
+		content: '\f121';
+	}
+
+	#ca-edit a::before {
+		content: '\f044';
+	}
+
+	#ca-history a::before {
+		content: '\f1da';
+	}
+
+	#ca-delete a::before {
+		content: '\f1f8';
+	}
+
+	#ca-move a::before {
+		content: '\f4df';
+	}
+
+	#ca-protect a::before {
+		content: '\f3ed';
+	}
+
+	#ca-watch a::before {
+		content: '\f005';
+		font-weight: normal;
+	}
+
+	#ca-unwatch a::before {
+		content: '\f005';
+	}
+
+	#ca-addsection a::before {
+		content: '\f067';
+	}
+
+	#ca-nstab-user a::before {
+		content: '\f007';
+	}
+
+	#t-contributions a::before {
+		content: '\f507';
+	}
+
+	#t-log a::before {
+		content: '\f022';
+	}
+
+	#t-whatlinkshere a::before {
+		content: '\f128';
+	}
+
+	#t-recentchangeslinked a::before {
+		content: '\f550';
+	}
+
+	#t-print a::before {
+		content: '\f02f';
+	}
+
+	#t-permalink a::before {
+		content: '\f0c1';
+	}
+
+	#t-info a::before {
+		content: '\f129';
+	}
+
+	#t-pagelog a::before {
+		content: '\f017';
+	}
+
+	#ca-nstab-category a::before,
+	.mw-normal-catlinks li a::before {
+		content: '\f07b';
+	}
+
+	#t-blockip a::before {
+		content: '\f05e';
+	}
+
+	#t-userrights a::before {
+		content: '\f0c0';
+	}
+
+	#ca-view {
+		display: none;
+	}
+}

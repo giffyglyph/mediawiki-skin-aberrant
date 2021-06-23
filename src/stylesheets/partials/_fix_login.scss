@@ -1,0 +1,99 @@
+// Fixes for the login page.
+
+.mw-ui-container #userloginForm {
+	background: $page-content-form-bg;
+	padding: 2rem;
+	border-radius: 0.25cm;
+	overflow: hidden;
+
+	.mw-input input {
+		border-color: white;
+		border-radius: 1cm;
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
+	form > div > :last-child {
+		margin-bottom: 0;
+	}
+
+	.mw-input > :last-child {
+		margin-bottom: 0;
+	}
+
+	.mw-ui-vform-field {
+		margin: 0;
+
+		+ * {
+			margin-top: 1rem;
+		}
+
+		> label {
+			text-transform: uppercase;
+			opacity: 0.5;
+			font-weight: 500;
+			letter-spacing: 1px;
+		}
+	}
+
+	.mw-ui-vform {
+		width: auto;
+		margin: 0 auto;
+	}
+
+	.mw-input button {
+		max-width: none;
+		border-radius: 1cm;
+
+		&.mw-ui-primary {
+			background: $theme-primary;
+			border-color: $theme-primary;
+
+			&:hover {
+				background: $theme-secondary;
+				border-color: $theme-secondary;
+			}
+		}
+	}
+
+	#mw-createaccount-cta {
+		width: 100%;
+		text-align: center;
+		font-weight: normal;
+		background: none;
+		padding: 0;
+		border-top: 1px dotted darken($page-content-form-bg, 20%);
+		padding-top: 1rem;
+	}
+
+	#mw-createaccount-join {
+		margin-top: 1rem;
+		max-width: none;
+		background: none;
+		color: $page-color-link;
+		border: none;
+		padding: 0;
+		font-weight: 500;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+
+		&:hover {
+			text-decoration: underline;
+		}
+
+		&::before {
+			content: '• ';
+		}
+
+		&::after {
+			content: ' •';
+		}
+	}
+}
+
+@media only screen and (max-width: $page-content-width) {
+
+	.mw-ui-container #userloginForm {
+		padding: 1rem;
+	}
+}

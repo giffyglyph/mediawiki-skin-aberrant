@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [ "Giffyglyph" ]
+	},
+	"skinname-aberrant": "Aberrant",
+	"aberrant-desc": "A skin for Giffyglyph's Aberrant Archives",
+	"aberrant-anonymous": "Anonymous",
+	"aberrant-loggedinas": "$1",
+	"aberrant-notloggedin": "Not logged in",
+	"aberrant-userpage": "{{GENDER:$1|User}} page",
+	"aberrant-talkpage": "{{GENDER:$1|User}} talk",
+	"aberrant-pagelog": "Page logs",
+	"aberrant-more": "More",
+	"aberrant-sitetools": "Wiki tools",
+	"aberrant-pageactions": "Page tools",
+	"aberrant-userpagetools": "Userpage tools",
+	"aberrant-action-addsection": "New topic",
+	"aberrant-view-view": "Read",
+	"aberrant-pagemisc": "More",
+	"aberrant-namespaces": "Namespaces",
+	"aberrant-pagetools": "Actions",
+	"aberrant-languages": "Languages",
+	"aberrant-projects": "Other projects",
+	"aberrant-sitetitle": "{{int:Sitetitle}}",
+	"aberrant-search-placeholder": "Search",
+	"aberrant.css": "/* CSS placed here will affect users of the Aberrant skin */",
+	"aberrant.js": "/* Any JavaScript here will be loaded for users using the Aberrant skin */",
+	"aberrant-options": "Options"
+}

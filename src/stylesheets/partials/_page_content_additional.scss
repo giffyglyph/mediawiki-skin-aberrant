@@ -1,0 +1,22 @@
+// Styles for content additional details (categories etc).
+
+#mw-content-container .content-additional-container {
+	border-top: 1px dotted $page-content-border-color-additional;
+	margin-top: 2rem;
+	padding-top: 2rem;
+	margin-left: -3rem;
+	margin-right: -3rem;
+	padding-left: 3rem;
+	padding-right: 3rem;
+
+	.content-additional {
+		background: $page-content-well-bg;
+		padding: 1rem;
+	}
+
+	+ .content-footer {
+		margin-top: 0;
+		border-top: 0;
+		padding-top: 1rem;
+	}
+}

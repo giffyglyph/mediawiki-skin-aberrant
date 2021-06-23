@@ -1,0 +1,33 @@
+// Common colors.
+
+$theme-primary: #1976d2;
+$theme-secondary: #FFC107;
+
+$page-header-bg: #272a30;
+$page-header-color: #9fa2a7;
+
+$page-navigation-bg: #f5f5f5;
+$page-navigation-color: rgba(#212529, 0.8);
+$page-navigation-border-color: darken($page-navigation-bg, 5%);
+
+$page-content-bg: white;
+$page-content-color: #212529;
+$page-content-border-color-h1: $theme-primary;
+$page-content-border-color-h2: rgba(black, 0.2);
+$page-content-border-color-h3: rgba(black, 0.1);
+$page-content-border-color-additional: rgba(black, 0.2);
+$page-content-border-color-footer: rgba(black, 0.2);
+$page-content-color-h1: $page-content-color;
+$page-content-color-h2: $page-content-color;
+$page-content-color-h3: rgba($page-content-color, 0.9);
+$page-content-color-h4: rgba($page-content-color, 0.8);
+$page-content-color-h5: rgba($page-content-color, 0.7);
+$page-content-color-h6: rgba($page-content-color, 0.6);
+$page-content-well-bg: #f5f5f5;
+
+$page-actions-bg: $page-navigation-bg;
+$page-actions-color: $page-navigation-color;
+
+$page-content-form-bg: $page-navigation-bg;
+
+$page-color-link: #007bff;
