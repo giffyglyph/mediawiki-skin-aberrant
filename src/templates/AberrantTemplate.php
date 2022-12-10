@@ -27,7 +27,8 @@ class AberrantTemplate extends BaseTemplate {
 			$this->getPortlet('pagemisc', $this->pileOfTools['page-tertiary'], 'aberrant-pagemisc') .
 			$this->getCategories();
 
-		$html = $this->get( 'headelement' );
+		$bodyOnly = $this->getSkin()->getOptions()['bodyOnly'] ?? false;
+		$html = $bodyOnly ? '' : $this->get( 'headelement' );
 		$html .= Html::rawElement( 'div', [ 'id' => 'mw-wrapper', 'class' => $userLinks['class'] ],
 			Html::rawElement( 'div', [ 'id' => 'mw-header-container' ],
 				Html::rawElement( 'div', [ 'id' => 'mw-header' ],
@@ -45,14 +46,15 @@ class AberrantTemplate extends BaseTemplate {
 			)
 		);
 
-		// BaseTemplate::printTrail() stuff (has no get version)
-		// Required for RL to run
-		$html .= MWDebug::getDebugHTML( $this->getSkin()->getContext() );
-		$html .= $this->get( 'bottomscripts' );
-		$html .= $this->get( 'reporttime' );
-
-		$html .= Html::closeElement( 'body' );
-		$html .= Html::closeElement( 'html' );
+		if ( !$bodyOnly ) {
+			// BaseTemplate::printTrail() stuff (has no get version)
+			// Required for RL to run
+			$html .= MWDebug::getDebugHTML( $this->getSkin()->getContext() );
+			$html .= $this->get( 'bottomscripts' );
+			$html .= $this->get( 'reporttime' );
+			$html .= Html::closeElement( 'body' );
+			$html .= Html::closeElement( 'html' );
+		}
 
 		// The unholy echo
 		echo $html;
@@ -197,7 +199,7 @@ class AberrantTemplate extends BaseTemplate {
 			Html::rawElement( 'h3', $labelOptions, $msgString ) .
 			Html::rawElement( 'div', $bodyDivOptions,
 				$contentText .
-				$this->getAfterPortlet( $name )
+				$this->getSkin()->getAfterPortlet( $name )
 			)
 		);
 
@@ -439,7 +441,7 @@ class AberrantTemplate extends BaseTemplate {
 		}
 
 		// Labels
-		if ( $user->isLoggedIn() ) {
+		if ( $user->isRegistered() ) {
 			$dropdownHeader = $userName;
 			$headerMsg = [ 'aberrant-loggedinas', $userName ];
 		} else {
@@ -583,7 +585,7 @@ class AberrantTemplate extends BaseTemplate {
 		}
 
 		// Tools that may be general or page-related (typically the toolbox)
-		$pileOfTools = $this->getToolbox();
+		$pileOfTools = $this->data['sidebar']['TOOLBOX'];
 		if ( $namespace >= 0 ) {
 			$pileOfTools['pagelog'] = [
 				'text' => $this->getMsg( 'aberrant-pagelog' )->text(),

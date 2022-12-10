@@ -13,6 +13,7 @@
 	"ValidSkinNames": {
 		"aberrant": "Aberrant"
 	},
+	"manifest_version": 2,
 	"MessagesDirs": {
 		"Aberrant": [
 			"i18n"
@@ -20,7 +21,7 @@
 	},
 	"ResourceModules": {
 		"skins.aberrant": {
-			"targets": [ "desktop", "mobile" ],
+
 			"styles": {
 				"resources/css/aberrant.css": {
 					"media": "screen"
