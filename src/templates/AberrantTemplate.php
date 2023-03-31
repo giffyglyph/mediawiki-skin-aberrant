@@ -1,4 +1,6 @@
 <?php
+use MediaWiki\MediaWikiServices;
+
 /**
  * BaseTemplate class for the Aberrant skin
  *
@@ -308,8 +310,10 @@ class AberrantTemplate extends BaseTemplate {
 				'role' => 'banner'
 			]
 		);
-		if ( $language->hasVariants() ) {
-			$siteTitle = $language->convert( $this->getMsg( 'timeless-sitetitle' )->escaped() );
+		$converter = MediaWikiServices::getInstance()->getLanguageConverterFactory()
+				->getLanguageConverter( $language );
+		if ( $converter->hasVariants() ) {
+			$siteTitle = $converter->convert( $this->getMsg( 'timeless-sitetitle' )->escaped() );
 		} else {
 			$siteTitle = $this->getMsg( 'timeless-sitetitle' )->escaped();
 		}
