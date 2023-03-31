@@ -9,6 +9,18 @@ class SkinAberrant extends SkinTemplate {
 	/** @var string */
 	public $template = 'AberrantTemplate';
 
+
+	/**
+	 * @inheritDoc
+	 */
+	public function __construct( $options ) {
+		$skinOptions = $this->getOptions();
+		if ( isset( $skinOptions['bodyOnly' ] ) ) {
+			$options['bodyOnly'] = true;
+		}
+		parent::__construct( $options );
+	}
+
 	/**
 	 * @param OutputPage $out
 	 */
