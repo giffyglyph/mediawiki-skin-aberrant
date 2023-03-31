@@ -240,7 +240,7 @@ class AberrantTemplate extends BaseTemplate {
 		if ( is_array( $content ) ) {
 			foreach ( $content as $key => $item ) {
 				foreach ( $item["links"] as $link ) {
-					$contentText .= Html::rawElement( 'a', [ 'class' => 'dropdown-item', 'href' => $link["href"], 'id' => $link["single-id"]], $link["text"] );
+					$contentText .= Html::rawElement( 'a', [ 'class' => 'dropdown-item', 'href' => $link["href"] ?? '#', 'id' => $link["single-id"]], $link["text"] );
 				}
 			}
 		} else {
